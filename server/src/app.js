@@ -12,7 +12,7 @@ const Task = require('./models/Task');
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://anything-ai-assignment.vercel.app/',
     credentials: true
 }));
 
