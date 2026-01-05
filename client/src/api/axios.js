@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:5000/api', // or your URL
+    baseURL: 'https://anything-ai-assignment-3d19-api.vercel.app/api', // or your URL
     withCredentials: true, // Important for cookies
 });
 

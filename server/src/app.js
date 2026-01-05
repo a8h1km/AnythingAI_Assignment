@@ -24,6 +24,9 @@ Task.belongsTo(User, { foreignKey: 'userId' });
 
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
+app.get('/', (req, res) => {
+    res.json({ message: "API is running on Vercel!" });
+});
 
 const PORT = process.env.PORT || 5000;
 sequelize.sync({ force: false })
