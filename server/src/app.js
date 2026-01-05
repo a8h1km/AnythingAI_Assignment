@@ -32,3 +32,13 @@ sequelize.sync({ force: false })
         app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
     })
     .catch(err => console.log(err));
+
+// Only run app.listen if we are NOT in production (e.g. running locally)
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+}
+
+// Export the app for Vercel
+module.exports = app;
